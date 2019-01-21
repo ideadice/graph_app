@@ -1,2 +1,3 @@
-# graph_app
-Graphs application
+# Graphs application
+master 	- 	Production branch
+dev	-	Development branch
