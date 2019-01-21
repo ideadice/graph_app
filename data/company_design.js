@@ -1,5 +1,5 @@
 
-//Design by Company Codes
+// Design by Company Codes
 function set_design(cc){
     if(cc=='199018'){ 
         cc_name='foresightauto'
