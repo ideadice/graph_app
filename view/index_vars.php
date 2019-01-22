@@ -6,7 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="windows-1255">
+<!--<meta charset="windows-1255">-->
+<meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GraphsApp_build_version</title>
 
@@ -230,6 +231,13 @@ INFO:
         <p id="debug16"></p>
         <p id="debug17"></p>
         <p id="debug18"></p>
+        <p id="debug19"></p>
+        <p id="debug20"></p>
+        <p id="debug21"></p>
+        <p id="debug22"></p>
+        <p id="debug23"></p>
+        <p id="debug24"></p>
+        <p id="debug25"></p>
         <p id="debug60"></p>
         
     </div>
