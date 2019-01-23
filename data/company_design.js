@@ -18,9 +18,10 @@ function set_design(cc){
     }
     if(cc=='475020'){ 
         cc_name='delek'
-        dicelinecolor='#386fa7'; // Line color at all charts
+        dicelinecolor='#0a75f7'; // Line color at all charts
         diceareacolor='rgba(224,239,255, 0.2)'; // Area color at all charts
-        dicegridcolor='#dce9f6'; // Grid color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
         //document.getElementById("debug4").innerHTML = "Hi From design func for " + cc_name;
     }
     if(cc=='86027'){ 
@@ -28,9 +29,10 @@ function set_design(cc){
     }
     if(cc=='543017'){ 
         cc_name='knafaim'
-        dicelinecolor='#a4f9ac'; // Line color at all charts
-        diceareacolor='rgb(136, 244, 252)'; // Area color at all charts
-        dicegridcolor='#ffd6ee'; // Grid color at all charts
+        dicelinecolor='#223468'; // Line color at all charts
+        diceareacolor='rgba(34,52,104,0.46)'; // Area color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
         //document.getElementById("debug4").innerHTML = "Hi From design func for " + cc_name;
     }
     if(cc=='612010'){ 

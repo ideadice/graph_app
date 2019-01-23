@@ -17,37 +17,47 @@ body {
   .chart-container {
     position: relative;
     margin: auto;
-    height: 400px;
+    height: 300px;
     width: 100%;
   }
 
   .mainButtons {
-             width:100%;
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: center;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: relative;
-    width: 100%;
   }
 .btn-dice{
     background-color:#fff;
     color:#333;
-    border: 1px solid #333;
-    border-radius: 4px;
-    padding: 5px 15px 5px 15px;
+    border: 0px solid #333;
+    padding: 5px;
     margin:4px;
     cursor: pointer;
-  outline: 0;
+    outline: 0;
+        font-weight: 400;
 }
 .btn-dice:hover{
-    background-color:#333!important;
-    border: 1px solid #333;
-    color:#fff;
+    border: 0px solid #333;
+    color:#333;
+    font-weight: 400;
 }
 .btn-dice:focus{
-    background-color:#333!important;
-    border: 1px solid #333;
-    color:#fff;
+    background-color:#f0f0f0!important;
+    border: 0px solid #333;
+    color:#333;
+        font-weight: 600;
+}
+#dailyFlag2{
+    cursor: not-allowed; 
+    color:#d8d8d8;
+    font-weight: 400;
+}
+#dailyFlag2:hover{
+    cursor: not-allowed;
+    color:#d8d8d8;
+    font-weight: 400;
 }
 .rz-dice{
       background-color:#fff;
