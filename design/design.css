@@ -79,7 +79,7 @@ body {
        width:100%;
        display: flex;
        flex-wrap: wrap;
-       justify-content: flex-end;
+       justify-content: center;
        text-align: center;
        font-family: "Arial", Sans-serif;
        flex-direction:row;

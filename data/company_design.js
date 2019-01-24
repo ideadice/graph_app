@@ -1,3 +1,9 @@
+/* 
+Currency selection:
+variables: nis / dollar
+*/
+nis="₪"
+dollar="$"
 
 // Design by Company Codes
 function set_design(cc){
@@ -22,7 +28,7 @@ function set_design(cc){
         diceareacolor='rgba(224,239,255, 0.2)'; // Area color at all charts
         dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
-        //document.getElementById("debug4").innerHTML = "Hi From design func for " + cc_name;
+        currency=nis
     }
     if(cc=='86027'){ 
         cc_name='ybox'
@@ -33,7 +39,7 @@ function set_design(cc){
         diceareacolor='rgba(34,52,104,0.46)'; // Area color at all charts
         dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
-        //document.getElementById("debug4").innerHTML = "Hi From design func for " + cc_name;
+        currency=nis
     }
     if(cc=='612010'){ 
         cc_name='ildc achshara'
