@@ -83,43 +83,53 @@ $apiDate=substr($resultsjson['History']['Entry']['0']['Date'],0,10);
 
 
 #Dates from API
-$apiDateSunday=substr($resultsjson['History']['Entry']['0']['Date'],0,10);
+#$apiDateSunday=substr($resultsjson['History']['Entry']['0']['Date'],0,10);
+#$originalDate = $apiDateSunday;
+$apiDateSunday = "0/0/0";
 $apiDateMonday=substr($resultsjson['History']['Entry']['1']['Date'],0,10);
+$originalDate = $apiDateMonday;
+$apiDateMonday = date("d/m/Y", strtotime($originalDate));
 $apiDateTuesday=substr($resultsjson['History']['Entry']['2']['Date'],0,10);
+$originalDate = $apiDateTuesday;
+$apiDateTuesday = date("d/m/Y", strtotime($originalDate));
 $apiDateWednesday=substr($resultsjson['History']['Entry']['3']['Date'],0,10);
+$originalDate = $apiDateWednesday;
+$apiDateWednesday = date("d/m/Y", strtotime($originalDate));
 $apiDateThursday=substr($resultsjson['History']['Entry']['4']['Date'],0,10);
+$originalDate = $apiDateThursday;
+$apiDateThursday = date("d/m/Y", strtotime($originalDate));
 
 #Change date structure
 if($apiDateSunday != null){
-    $apiDateSunday = date("d-m-Y", strtotime($apiDateSunday));
+    $apiDateSunday = date("d/m/Y", strtotime($apiDateSunday));
 }
 else
 {
     $apiDateSunday="-";
 }
 if($apiDateMonday != null){
-    $apiDateMonday = date("d-m-Y", strtotime($apiDateMonday));
+    $apiDateMonday = date("d/m/Y", strtotime($apiDateMonday));
 }
 else
 {
     $apiDateMonday="-";
 }
 if($apiDateTuesday != null){
-    $apiDateTuesday = date("d-m-Y", strtotime($apiDateTuesday));
+    $apiDateTuesday = date("d/m/Y", strtotime($apiDateTuesday));
 }
 else
 {
     $apiDateTuesday="-";
 }
 if($apiDateWednesday != null){
-    $apiDateWednesday = date("d-m-Y", strtotime($apiDateWednesday));
+    $apiDateWednesday = date("d/m/Y", strtotime($apiDateWednesday));
 }
 else
 {
     $apiDateWednesday="-";
 }
 if($apiDateThursday != null){
-    $apiDateThursday = date("d-m-Y", strtotime($apiDateThursday));
+    $apiDateThursday = date("d/m/Y", strtotime($apiDateThursday));
 }
 else
 {
