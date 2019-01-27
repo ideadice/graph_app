@@ -12,9 +12,19 @@ function set_design(cc){
     }
     if(cc=='257014'){ 
         cc_name='merchavia'
+        dicelinecolor='#223468'; // Line color at all charts
+        diceareacolor='rgba(34,52,104,0.46)'; // Area color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
     }
     if(cc=='258012'){ 
         cc_name='tadiran'
+        dicelinecolor='#223468'; // Line color at all charts
+        diceareacolor='rgba(34,52,104,0.46)'; // Area color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
     }
     if(cc=='345017'){ 
         cc_name='modiin'
@@ -28,7 +38,7 @@ function set_design(cc){
         diceareacolor='rgba(224,239,255, 0.2)'; // Area color at all charts
         dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
-        currency=nis
+        currency=nis;
     }
     if(cc=='86027'){ 
         cc_name='ybox'
@@ -39,7 +49,7 @@ function set_design(cc){
         diceareacolor='rgba(34,52,104,0.46)'; // Area color at all charts
         dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
-        currency=nis
+        currency=nis;
     }
     if(cc=='612010'){ 
         cc_name='ildc achshara'
