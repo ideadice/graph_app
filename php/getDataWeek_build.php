@@ -57,6 +57,8 @@ $monthDays = sizeof($resultsjson['History']['Entry']);
 #Create variables with dates 'date0,date1,..'
 for($i = 0; $i <= ($monthDays-1); $i++) {
     ${"srcDate$i"} = substr($resultsjson['History']['Entry'][$i]['Date'],0,10);
+    $originalDate = ${"srcDate$i"};
+    ${"srcDate$i"} = date("d/m/Y", strtotime($originalDate));
     #echo "<br>";
     #echo ${"srcDate$i"};
 }

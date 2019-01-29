@@ -75,13 +75,14 @@ INFO:
 <input type="button" class="btn-dice" ng-click="showHideFunc('showMonth');" value="Month">
 <input type="button" class="btn-dice" ng-click="showHideFunc('show3Month');" value="3 Months">
 <input type="button" class="btn-dice" ng-click="showHideFunc('show6Month');" value="6 Months">
-<input type="button" class="btn-dice" ng-click="showHideFunc('showYear');" value="Year" autofocus>
+<input type="button" id="yearBtn" class="btn-dice" ng-click="showHideFunc('showYear');" value="Year">
 <input type="button" class="btn-dice" ng-click="showHideFunc('show3year');" value="3 Years">
 <input type="button" class="btn-dice" ng-click="showHideFunc('show5year');" value="5 Years">
 </div>
 
 <!--Weekly chart-->
 <div ng-show="showval" class="chart-container">
+        <canvas id="chart"></canvas>
         <div class="InfoBox">
                 <p class="data" id="weekDate"></p>
                 <p class="data" id="weekLockRate"> </p>
@@ -91,14 +92,13 @@ INFO:
                 <p class="data" id="weekDailyLow"> </p> 
                 <p class="data" id="weekTurnover"> </p>                
         </div>
-        <canvas id="chart"></canvas>
-        <button class="rz-dice" onclick="resetZoomWeek()">Reset Zoom</button>
         
 </div>
 
 <!--Monthly chart-->
 <div ng-hide="hideval" class="chart-container">
-        <div class="InfoBox">
+    <canvas id="chartMonth"></canvas>
+            <div class="InfoBox">
                 <p class="data" id="monthDate"></p>
                 <p class="data" id="monthLockRate"></p>
                 <p class="data" id="monthPrevClose"></p> 
@@ -107,13 +107,12 @@ INFO:
                 <p class="data" id="monthDailyLow"></p> 
                 <p class="data" id="monthTurnover"></p>                
         </div>
-    <canvas id="chartMonth"></canvas>
-        <button class="rz-dice" onclick="resetZoomMonth()">Reset Zoom</button>
 </div>
 
 <!--3 Months chart-->
 <div ng-hide="hideval3m" class="chart-container">
-    <div class="InfoBox">
+<canvas id="chart3Month"></canvas>
+        <div class="InfoBox">
             <p class="data" id="month3Date"></p>
             <p class="data" id="month3LockRate"></p>
             <p class="data" id="month3PrevClose"></p> 
@@ -122,13 +121,12 @@ INFO:
             <p class="data" id="month3DailyLow"></p> 
             <p class="data" id="month3Turnover"></p>                
     </div>
-<canvas id="chart3Month"></canvas>
-    <button class="rz-dice" onclick="resetZoom3Month()">Reset Zoom</button>
 </div>
 
 <!--6 Months chart-->
 <div ng-hide="hideval6m" class="chart-container">
-    <div class="InfoBox">
+<canvas id="chart6Month"></canvas>
+        <div class="InfoBox">
             <p class="data" id="month6Date"></p>
             <p class="data" id="month6LockRate"></p>
             <p class="data" id="month6PrevClose"></p> 
@@ -137,13 +135,12 @@ INFO:
             <p class="data" id="month6DailyLow"></p> 
             <p class="data" id="month6Turnover"></p>                
     </div>
-<canvas id="chart6Month"></canvas>
-    <button class="rz-dice" onclick="resetZoom6Month()">Reset Zoom</button>
 </div>
 
 <!--Year chart-->
 <div ng-hide="hideval2" class="chart-container">
-    <div class="InfoBox">
+    <canvas id="chartYear"></canvas>
+        <div class="InfoBox">
             <p class="data" id="yearDate"></p>
             <p class="data" id="yearLockRate"></p>
             <p class="data" id="yearPrevClose"></p> 
@@ -152,13 +149,15 @@ INFO:
             <p class="data" id="yearDailyLow"></p> 
             <p class="data" id="yearTurnover"></p>                
     </div>
-    <canvas id="chartYear"></canvas>
-        <button class="rz-dice" onclick="resetZoomYear()">Reset Zoom</button>
 </div>
 
 <!--3 Years chart-->
 <div ng-hide="hideval3y" class="chart-container">
-    <div id="infoBox3y" class="InfoBox">
+
+    <div id="loader3y" ng-show="loaderStatus"  class="lds-ripple"><div></div><div></div></div>
+    
+<canvas id="chart3Year"></canvas>
+        <div id="infoBox3y" class="InfoBox">
             <p class="data" id="year3Date"></p>
             <p class="data" id="year3LockRate"></p>
             <p class="data" id="year3PrevClose"></p> 
@@ -167,15 +166,14 @@ INFO:
             <p class="data" id="year3DailyLow"></p> 
             <p class="data" id="year3Turnover"></p>                
     </div>
-    <div id="loader3y" ng-show="loaderStatus"  class="lds-ripple"><div></div><div></div></div>
-    
-<canvas id="chart3Year"></canvas>
-    <button class="rz-dice" onclick="resetZoom3Year()">Reset Zoom</button>
 </div>
 
 <!--5 Years chart-->
 <div ng-hide="hideval5y" class="chart-container">
-    <div id="infoBox5y" class="InfoBox">
+    <div id="loader5y" ng-show="loaderStatus"  class="lds-ripple"><div></div><div></div></div>
+    
+<canvas id="chart5Year"></canvas>
+        <div id="infoBox5y" class="InfoBox">
             <p class="data" id="year5Date"></p>
             <p class="data" id="year5LockRate"></p>
             <p class="data" id="year5PrevClose"></p> 
@@ -184,15 +182,12 @@ INFO:
             <p class="data" id="year5DailyLow"></p> 
             <p class="data" id="year5Turnover"></p>                
     </div>
-    <div id="loader5y" ng-show="loaderStatus"  class="lds-ripple"><div></div><div></div></div>
-    
-<canvas id="chart5Year"></canvas>
-        <button class="rz-dice" onclick="resetZoom5Year()">Reset Zoom</button>
 </div>
 
 <!--Daily chart-->
 <div ng-hide="hidevalDaily" class="chart-container">
-    <div class="InfoBox">
+    <canvas id="chartDaily"></canvas>
+        <div class="InfoBox">
             <p class="data" id="dailyTime"></p>
             <p class="data" id="dailyRate"></p>
             <p class="data" id="dailyDailyHigh"></p> 
@@ -203,8 +198,6 @@ INFO:
             <p class="data" id="dailyAllYearMax"></p> 
             <p class="data" id="dailyAllYearMin"></p>    
     </div>
-    <canvas id="chartDaily"></canvas>
-        <button class="rz-dice" onclick="resetZoomDaily()">Reset Zoom</button>
 </div>
 
 </div>
