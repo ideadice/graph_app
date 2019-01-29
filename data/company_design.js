@@ -77,8 +77,13 @@ function set_design(cc){
     if(cc=='1099571'){ 
         cc_name='xenia'
     }
-    if(cc=='1102532'){ 
-        cc_name='hanan mor'
+    if(cc=='1102532'){
+        cc_name='hanan mor';
+        dicelinecolor='#223468'; // Line color at all charts
+        diceareacolor='rgba(34,52,104,0.46)'; // Area color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
     }
     if(cc=='1104058'){ 
         cc_name='tzemach'

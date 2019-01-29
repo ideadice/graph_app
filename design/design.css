@@ -89,7 +89,7 @@ body {
     .data{
       line-height: 0px;
       text-align: center;
-      font-size:10px;
+      font-size:13px;
       padding-left:7px;
       padding-right:7px;
     }
@@ -106,4 +106,7 @@ body {
         .InfoBox{
        justify-content: center;
     }
+      .data{
+    font-size:10px;
+  }
 }
