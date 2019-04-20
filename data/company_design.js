@@ -11,7 +11,7 @@ function set_design(cc){
         cc_name='univo'
         dicelinecolor='#03753b'; // Line color at all charts
         diceareacolor='rgba(3,117,59,0.2)'; // Area color at all charts
-        dicegridcolor='#03753b'; // Grid color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
         currency=nis;
     }
