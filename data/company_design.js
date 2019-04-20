@@ -7,6 +7,14 @@ dollar="$"
 
 // Design by Company Codes
 function set_design(cc){
+    if(cc=='1117688'){ 
+        cc_name='alongas'
+        dicelinecolor='#00762b'; // Line color at all charts
+        diceareacolor='rgba(0,118,43,0.2)'; // Area color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
     if(cc=='1093558'){ 
         cc_name='univo'
         dicelinecolor='#03753b'; // Line color at all charts
