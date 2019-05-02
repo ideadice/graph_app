@@ -15,6 +15,14 @@ function set_design(cc){
         document.body.style.background = "#fff"; // Background color
         currency=nis;
     }
+    if(cc=='1085265'){ 
+        cc_name='aran'
+        dicelinecolor='#00529c'; // Line color at all charts
+        diceareacolor='rgba(0,82,156,0.2)'; // Area color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
     if(cc=='1093558'){ 
         cc_name='univo'
         dicelinecolor='#03753b'; // Line color at all charts
@@ -113,8 +121,8 @@ function set_design(cc){
     }
     if(cc=='1082007'){ 
         cc_name='shoam'
-        dicelinecolor='#142846'; // Line color at all charts
-        diceareacolor='rgba(224,239,255, 0.2)'; // Area color at all charts
+        dicelinecolor='#171b51'; // Line color at all charts
+        diceareacolor='rgba(23,27,81,0.2)'; // Area color at all charts
         dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
         currency=nis;
@@ -153,8 +161,8 @@ function set_design(cc){
     }
     if(cc=='1099571'){ 
         cc_name='xenia'
-        dicelinecolor='#142846'; // Line color at all charts
-        diceareacolor='rgba(224,239,255, 0.2)'; // Area color at all charts
+        dicelinecolor='#474747'; // Line color at all charts
+        diceareacolor='rgba(71,71,71,0.2)'; // Area color at all charts
         dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
         currency=nis;
@@ -185,8 +193,8 @@ function set_design(cc){
     }
     if(cc=='1120161'){ 
         cc_name='insuline'
-        dicelinecolor='#142846'; // Line color at all charts
-        diceareacolor='rgba(224,239,255, 0.2)'; // Area color at all charts
+        dicelinecolor='#3a426d'; // Line color at all charts
+        diceareacolor='rgba(58,66,109,0.2)'; // Area color at all charts
         dicegridcolor='#e8e8e8'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
         currency=nis;
