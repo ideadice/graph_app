@@ -111,6 +111,14 @@ function set_design(cc){
         document.body.style.background = "#fff"; // Background color
         currency=nis;
     }
+    if(cc=='1118116'){ 
+        cc_name='cannomed'
+        dicelinecolor='#80bc79'; // Line color at all charts
+        diceareacolor='rgba(0,82,156,0.0)'; // Area color at all charts
+        dicegridcolor='#f6f6f6'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
     if(cc=='612024'){ 
         cc_name='no_name'
         dicelinecolor='#142846'; // Line color at all charts
