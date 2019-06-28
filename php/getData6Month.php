@@ -32,8 +32,9 @@ $shiftDate=date("dmY",strtotime("-6 months"));
 #Order the data of the whole month in json
 #$resultsjson = json_decode($func_output, true);
 
+$cc = get_globalcc();
 #Get data from cache
-$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/cached_6_month_data.json');
+$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/'.$cc.'cached_6_month_data.json');
 #Order the data of the whole month in json
 $resultsjson = json_decode($jsonData, true);
 

@@ -32,8 +32,13 @@ $shiftDate=date("dmY",strtotime("-1 years"));
 #Order the data of the whole month in json
 #$resultsjson = json_decode($func_output, true);
 
+#echo 'running get_globalcc()';
+$cc = get_globalcc();
+#echo $cc;
+#echo 'FINISHED running get_globalcc()';
+
 #Get data from cache
-$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/cached_1_year_data.json');
+$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/'.$cc.'cached_1_year_data.json');
 #Order the data of the whole month in json
 $resultsjson = json_decode($jsonData, true);
 
