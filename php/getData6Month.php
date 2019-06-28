@@ -27,10 +27,15 @@ $shiftDate=date("dmY",strtotime("-6 months"));
 
 #Get data for each day of the month
 
-$func_output=historicalFunction($shiftDate,$todayDate);
+#$func_output=historicalFunction($shiftDate,$todayDate);
 
 #Order the data of the whole month in json
-$resultsjson = json_decode($func_output, true);
+#$resultsjson = json_decode($func_output, true);
+
+#Get data from cache
+$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/cached_6_month_data.json');
+#Order the data of the whole month in json
+$resultsjson = json_decode($jsonData, true);
 
 #TEST Json - Print json data
 #echo "<br>"."Print r results array with pre:";
