@@ -201,9 +201,9 @@ function set_design(cc){
     }
     if(cc=='1105196'){ 
         cc_name='mishorim'
-        dicelinecolor='#4054b2'; // Line color at all charts
-        diceareacolor='rgba(64,84,178,0.2)'; // Area color at all charts
-        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        dicelinecolor='#012c60'; // Line color at all charts
+        diceareacolor='rgba(64,84,178,0.0)'; // Area color at all charts
+        dicegridcolor='#f6f6f6'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
         currency=nis;
     }
