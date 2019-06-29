@@ -38,6 +38,7 @@
     function startup(){
         <?php
             include "/var/www/html/master/public/graph_app/workground/php/globalConfig.php";
+            setcookie('PHPSESSID', session_id(), 0, '/');
             if (isset($_SESSION['cc']))
             {
                 $_SESSION = array();

@@ -17,7 +17,7 @@ $todayDate=date("dmY");
 #echo "<br>";
 #END test dates
 
-#Shift data 1 year back
+#Shift data 5 year back
 $shiftDate=date("dmY",strtotime("-5 years"));
 #echo "Shift date:"."<br>";
 #echo $shiftDate;
@@ -27,10 +27,18 @@ $shiftDate=date("dmY",strtotime("-5 years"));
 
 #Get data for each day of the month
 
-$func_output=historicalFunction($shiftDate,$todayDate);
+#$func_output=historicalFunction($shiftDate,$todayDate);
 
 #Order the data of the whole month in json
-$resultsjson = json_decode($func_output, true);
+#$resultsjson = json_decode($func_output, true);
+
+$cc = get_globalcc();
+#Take data from cache
+$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/'.$cc.'cached_5_year_data.json');
+#Order the data of the whole month in json
+$resultsjson = json_decode($jsonData, true);
+#echo json_encode($func_output, JSON_PRETTY_PRINT);
+
 
 #TEST Json - Print json data
 #echo "<br>"."Print r results array with pre:";

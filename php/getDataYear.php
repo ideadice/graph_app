@@ -27,10 +27,20 @@ $shiftDate=date("dmY",strtotime("-1 years"));
 
 #Get data for each day of the month
 
-$func_output=historicalFunction($shiftDate,$todayDate);
+#$func_output=historicalFunction($shiftDate,$todayDate);
 
 #Order the data of the whole month in json
-$resultsjson = json_decode($func_output, true);
+#$resultsjson = json_decode($func_output, true);
+
+#echo 'running get_globalcc()';
+$cc = get_globalcc();
+#echo $cc;
+#echo 'FINISHED running get_globalcc()';
+
+#Get data from cache
+$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/'.$cc.'cached_1_year_data.json');
+#Order the data of the whole month in json
+$resultsjson = json_decode($jsonData, true);
 
 #TEST Json - Print json data
 #echo "<br>"."Print r results array with pre:";
