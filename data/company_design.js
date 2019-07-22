@@ -79,6 +79,14 @@ function set_design(cc){
         document.body.style.background = "#fff"; // Background color
         currency=nis;
     }
+    if(cc=='1147479'){ 
+        cc_name='royalb1'
+        dicelinecolor='#00aeef'; // Line color at all charts
+        diceareacolor='rgba(0,174,239,0)'; // Area color at all charts
+        dicegridcolor='#e8e8e8'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
     if(cc=='86027'){ 
         cc_name='ybox'
         dicelinecolor='#142846'; // Line color at all charts
@@ -106,6 +114,22 @@ function set_design(cc){
     if(cc=='1085265'){ 
         cc_name='aran'
         dicelinecolor='#00529c'; // Line color at all charts
+        diceareacolor='rgba(0,82,156,0.0)'; // Area color at all charts
+        dicegridcolor='#f6f6f6'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
+    if(cc=='720011'){ 
+        cc_name='ENLIGHT'
+        dicelinecolor='#f4811f'; // Line color at all charts
+        diceareacolor='rgba(0,82,156,0.0)'; // Area color at all charts
+        dicegridcolor='#f6f6f6'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
+    if(cc=='434019'){ 
+        cc_name='canada'
+        dicelinecolor='#9f1838'; // Line color at all charts
         diceareacolor='rgba(0,82,156,0.0)'; // Area color at all charts
         dicegridcolor='#f6f6f6'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
