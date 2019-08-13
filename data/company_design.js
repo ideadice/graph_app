@@ -129,7 +129,7 @@ function set_design(cc){
     }
     if(cc=='434019'){ 
         cc_name='canada'
-        dicelinecolor='#9f1838'; // Line color at all charts
+        dicelinecolor='#000000'; // Line color at all charts
         diceareacolor='rgba(0,82,156,0.0)'; // Area color at all charts
         dicegridcolor='#f6f6f6'; // Grid color at all charts
         document.body.style.background = "#fff"; // Background color
