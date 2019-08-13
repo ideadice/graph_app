@@ -135,6 +135,22 @@ function set_design(cc){
         document.body.style.background = "#fff"; // Background color
         currency=nis;
     }
+        if(cc=='1143619'){ 
+        cc_name='Zim'
+        dicelinecolor='#1b41a4'; // Line color at all charts
+        diceareacolor='rgba(0,82,156,0.0)'; // Area color at all charts
+        dicegridcolor='#f6f6f6'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
+        if(cc=='448019'){ 
+        cc_name='gibui'
+        dicelinecolor='#000000'; // Line color at all charts
+        diceareacolor='rgba(0,82,156,0.0)'; // Area color at all charts
+        dicegridcolor='#f6f6f6'; // Grid color at all charts
+        document.body.style.background = "#fff"; // Background color
+        currency=nis;
+    }
     if(cc=='434019'){ 
         cc_name='canada'
         dicelinecolor='#000000'; // Line color at all charts
