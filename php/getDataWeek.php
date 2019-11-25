@@ -26,15 +26,18 @@ $shiftDate=date("dmY",strtotime($shiftValue.' days'));
 #echo "<br>";
 #END test dates
 
+$cc = get_globalcc();
 
 #Get data for each day of the week
 #Send to function: shiftDate - Sunday, and todayDate - Thursday
 
-$func_output=historicalFunction($shiftDate,$todayDate);
+#$func_output=historicalFunction($shiftDate,$todayDate);
+
+$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/'.$cc.'cached_1_week_data.json');
 
 #Order the data of the last 5 days in json
 #Json from 0 to 4 (5 days), first day is 0.
-$resultsjson = json_decode($func_output, true);
+$resultsjson = json_decode($jsonData, true);
 
 #TEST Json - Print json data
 #echo "<br>"."Print r results array with pre:";

@@ -24,13 +24,20 @@ $shiftDate=date("dmY",strtotime("-1 months"));
 #echo "<br>";
 #END test dates
 
+$cc = get_globalcc();
 
-#Get data for each day of the month
+#Get data for each day of the month - OLD
 
-$func_output=historicalFunction($shiftDate,$todayDate);
+#$func_output=historicalFunction($shiftDate,$todayDate);
 
-#Order the data of the whole month in json
-$resultsjson = json_decode($func_output, true);
+#Get data from cache - NEW
+$jsonData = file_get_contents('/var/www/html/master/public/graph_app/cache/'.$cc.'cached_1_month_data.json');
+
+#Order the data of the whole month in json - OLD
+#$resultsjson = json_decode($func_output, true);
+
+#Order the data of the whole month in json - NEW
+$resultsjson = json_decode($jsonData, true);
 
 #TEST Json - Print json data
 #echo "<br>"."Print r results array with pre:";
