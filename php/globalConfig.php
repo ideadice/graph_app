@@ -34,9 +34,14 @@ function get_globalcc(){
 
 #START - Get data from API
 
+#echo "[!] Login to API";
+
 $jsonPresentation=file_get_contents('http://irwebsites.co.il/Investor_Relations/pages/gto/login.php');
 $json_data_presentation=json_decode($jsonPresentation,true);
 $lengthPresentationJSON = sizeof($json_data_presentation);
+
+#echo "[i] Session Key: ";
+#echo $json_data_presentation["Login"]["SessionKey"];
 
 #Function for session CC usage
 function historicalFunction($shiftDate,$todayDate) {

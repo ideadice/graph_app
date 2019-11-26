@@ -28,93 +28,22 @@ $json_data_presentation=json_decode($jsonPresentation,true);
 
 #Save cache for each company code. cache file pattern: 86027cached_6_month_data.json
 
-$retryCount = 0;
-
-function testResults($res){
-
-    global $retryCount;
-    global $jsonPresentation;
-    global $jsonPresentation;
-
-    if(($res != 'null') && ($retryCount < 5)){
-        echo "\n[!] Trying connection: " . $retryCount;
-        $jsonWorks = json_decode($res, true);
-        if(isset($jsonWorks["Exception"]["-ExceptionType"])){
-            echo "\n\n[!][!] EXCEPTION !! - sleep 5 sec - generating new key...";
-            $retryCount++;
-            sleep(5);
-
-            $jsonPresentation=file_get_contents('http://irwebsites.co.il/Investor_Relations/pages/gto/login.php');
-            $json_data_presentation=json_decode($jsonPresentation,true);
-
-            return "exception";
-        }
-        else{
-            $retryCount = 0;
-            echo "\n[!][!] OK !!";
-            return "ok";
-        }        
-    }
-    else{
-        return 'null';
-    }
-
-    
-}
-
-#Init vars
-$apiCall_1week_data = 'null';
-$apiCall_1month_data = 'null';
-$apiCall_1year_data = 'null';
-$apiCall_5year_data = 'null';
-$apiCall_3year_data = 'null';
-$apiCall_6month_data = 'null';
-$apiCall_3month_data = 'null';
-
 for ($i = 0; $i < count($ccArray); $i++) {
     #Get data from API (from globalConfig.php)
-    $retryCount = 0;
-    do{
-        sleep(0.25);
-        $apiCall_1week_data=historicalFunction_cache($shiftDateWeek,$todayDate,$ccArray[$i]);
-    }while(testResults($apiCall_1week_data) == "exception");
-
-    $retryCount = 0;
-    do{
-        sleep(0.25);
-        $apiCall_1month_data=historicalFunction_cache($shiftDateMonth,$todayDate,$ccArray[$i]);
-    }while(testResults($apiCall_1month_data) == "exception");
-
-    $retryCount = 0;
-    do{
-        sleep(0.25);
-        $apiCall_1year_data=historicalFunction_cache($shiftDate1,$todayDate,$ccArray[$i]);
-    }while(testResults($apiCall_1year_data) == "exception");
-
-    $retryCount = 0;
-    do{
-        sleep(0.25);
-        $apiCall_5year_data=historicalFunction_cache($shiftDate5,$todayDate,$ccArray[$i]);
-    }while(testResults($apiCall_5year_data) == "exception");
-
-    $retryCount = 0;
-    do{
-        sleep(0.25);
-        $apiCall_3year_data=historicalFunction_cache($shiftDate3,$todayDate,$ccArray[$i]);
-    }while(testResults($apiCall_3year_data) == "exception");
-
-    $retryCount = 0;
-    do{
-        sleep(0.25);
-        $apiCall_6month_data=historicalFunction_cache($shiftDate6m,$todayDate,$ccArray[$i]);
-    }while(testResults($apiCall_6month_data) == "exception");
-
-    $retryCount = 0;
-    do{
-        sleep(0.25);
-        $apiCall_3month_data=historicalFunction_cache($shiftDate3m,$todayDate,$ccArray[$i]);
-    }while(testResults($apiCall_3month_data) == "exception");
-
+    sleep(0.25);
+    $apiCall_1week_data=historicalFunction_cache($shiftDateWeek,$todayDate,$ccArray[$i]);
+    sleep(0.25);
+    $apiCall_1month_data=historicalFunction_cache($shiftDateMonth,$todayDate,$ccArray[$i]);
+    sleep(0.25);
+    $apiCall_1year_data=historicalFunction_cache($shiftDate1,$todayDate,$ccArray[$i]);
+    sleep(0.25);
+    $apiCall_5year_data=historicalFunction_cache($shiftDate5,$todayDate,$ccArray[$i]);
+    sleep(0.25);
+    $apiCall_3year_data=historicalFunction_cache($shiftDate3,$todayDate,$ccArray[$i]);
+    sleep(0.25);
+    $apiCall_6month_data=historicalFunction_cache($shiftDate6m,$todayDate,$ccArray[$i]);
+    sleep(0.25);
+    $apiCall_3month_data=historicalFunction_cache($shiftDate3m,$todayDate,$ccArray[$i]);
 
     #Save cached data to ./chache local data repo
 
@@ -179,6 +108,8 @@ function historicalFunction_cache($shiftDate,$todayDate,$inputCC) {
     
     curl_close($curl);
     
+    $jsonWorks = json_decode($response, true);
+    echo "\n[!] Content: " . $jsonWorks["History"]["-Key"];
     return $response;
 }
 
